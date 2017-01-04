@@ -1,0 +1,38 @@
+body {
+    margin: auto;
+
+}
+
+.flip {
+    margin-top: 50px;
+    text-align: center;
+}
+
+button {
+    margin: 15px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    height: 30px;
+    width: 90px;
+    background-color: #333fff;
+}
+
+#bottom-container {
+    height: 100px;
+}
+
+#heads {
+    float: left;
+
+    height: 100%;
+    border: 1px solid #cacaca;
+}
+
+#tails {
+    float: left;
+
+    height: 100%;
+    border: 1px solid #cacaca;
+}
