@@ -1,17 +1,14 @@
+
+var heads = 0;
+var tails = 0;
+
 var Application = React.createClass({
-
-    // getInitialState: function() {
-    //     return{
-    //         image: `http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-tail.jpg`
-    //     }
-    // },
-
-
     render: function() {
         return(
             <div className="application">
                 <div>
                     <Coin />
+
                 </div>
             </div>
         )
@@ -45,16 +42,29 @@ var Coin = React.createClass({
 
     render: function() {
         return(
-            <div className="flip">
+            <div className="coin">
                 <div><img src={this.state.image} /></div>
                 <button onClick={this.flipCoin}>Flip coin</button>
+                <Tally side={this.state.side} />
             </div>
         )
 
     }
 })
 
-
+function Tally(props) {
+    if (props.side === 0) {
+        heads++;
+    } else {
+        tails++;
+    }
+    return(
+        <div className="tally">
+            <div className="heads">Heads: {heads}</div>
+            <div className="tails">Tails: {tails}</div>
+        </div>
+    )
+}
 
 
 ReactDOM.render(
